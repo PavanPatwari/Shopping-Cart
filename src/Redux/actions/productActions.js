@@ -31,10 +31,3 @@ export const removeEelectedProduct = () => {
     type: ActionTypes.REMOVE_SELECTED_PRODUCT,
   };
 };
-
-// export const getCategories = (categories) => {
-//   return {
-//     type: ActionTypes.GET_CATEGORIES,
-//     payload: categories,
-//   };
-// };

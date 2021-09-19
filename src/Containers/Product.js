@@ -10,7 +10,10 @@ function Product() {
   const renderList = products.map((product) => {
     const { id, title, image, price, category } = product;
     return (
-      <Link to={`/Shopping-Cart/product/${id}`}>
+      <Link
+        to={`/Shopping-Cart/product/${id}`}
+        style={{ textDecoration: "none" }}
+      >
         <div className="product" key={id}>
           <div className="card">
             <img src={image} alt="Img Not found" className="product__Image" />

@@ -42,6 +42,7 @@ function CategoriesDropdown() {
           onChange={getProductsByCategories}
           className="categories__dropDown"
         >
+          <MenuItem></MenuItem>
           {categories.map((item) => (
             <MenuItem value={item}>{item}</MenuItem>
           ))}
