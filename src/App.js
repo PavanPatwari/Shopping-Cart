@@ -9,6 +9,7 @@ function App() {
     <div className="App">
       <Router>
         <Header />
+        {/* <CategoriesDropdown /> */}
         <Switch>
           <Route exact path="/Shopping-Cart" component={ProductListing} />
           <Route

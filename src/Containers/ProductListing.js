@@ -3,37 +3,26 @@ import { useSelector, useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
 import Product from "./Product";
 import axios from "axios";
-import { setProducts } from "../Redux/actions/productActions";
+import { setProducts, fetchProducts } from "../Redux/actions/productActions";
 import "./ProductListing.css";
 import CircularProgress from "@material-ui/core/CircularProgress";
+import CategoriesDropdown from "./CategoriesDropdown";
 
 function ProductListing() {
   const products = useSelector((state) => state);
   const dispatch = useDispatch();
   const [loading, setLoading] = useState(false);
 
-  const fetchProducts = async () => {
-    setLoading(true);
-    const response = await axios
-      .get("https://fakestoreapi.com/products")
-      .catch((err) => {
-        console.log(err);
-      });
-    dispatch(setProducts(response.data));
-    setLoading(false);
-  };
-
   useEffect(() => {
-    fetchProducts();
+    dispatch(fetchProducts());
   }, []);
-
-  console.log("Products ", products);
 
   return (
     <div className="productListing">
+      <CategoriesDropdown />
       {loading ? (
-        <div>
-          <CircularProgress className="loading" /> loading...please wait
+        <div className="loadingSpinner">
+          <CircularProgress className="loading" /> <p>loading...please wait</p>
         </div>
       ) : (
         <Product />
