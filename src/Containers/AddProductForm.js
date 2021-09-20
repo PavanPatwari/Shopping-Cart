@@ -4,7 +4,7 @@ import "./AddProductForm.css";
 import Button from "@material-ui/core/Button";
 import axios from "axios";
 
-function AddProductForm({ setOpenModal }) {
+function AddProductForm({ setOpenModal, setOpen }) {
   const [title, setTitle] = useState("");
   const [price, setPrice] = useState("");
   const [description, setDescription] = useState("");
@@ -26,6 +26,8 @@ function AddProductForm({ setOpenModal }) {
       })
       .then(function (response) {
         console.log(response);
+        setOpenModal(false);
+        setOpen(true);
       })
       .catch(function (error) {
         console.log(error);
