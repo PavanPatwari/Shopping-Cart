@@ -11,7 +11,7 @@ function Header() {
       <Link to="/Shopping-Cart" style={{ textDecoration: "none" }}>
         <AppBar position="static">
           <Toolbar variant="dense">
-            <Typography variant="h6" color="inherit">
+            <Typography variant="h6" color="inherit" className="headerText">
               <p>Online-Shop</p>
             </Typography>
           </Toolbar>

@@ -1,7 +1,8 @@
-p{
-    text-decoration: none;
-}
-
-.header{
-    text-decoration: none;
+@media only screen and (max-width: 380px) {
+    .headerText{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 }

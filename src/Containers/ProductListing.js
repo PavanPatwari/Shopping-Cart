@@ -7,6 +7,7 @@ import { setProducts, fetchProducts } from "../Redux/actions/productActions";
 import "./ProductListing.css";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import CategoriesDropdown from "./CategoriesDropdown";
+import AddNewProduct from "./AddNewProduct";
 
 function ProductListing() {
   const products = useSelector((state) => state);
@@ -20,6 +21,7 @@ function ProductListing() {
   return (
     <div className="productListing">
       <CategoriesDropdown />
+      <AddNewProduct />
       {loading ? (
         <div className="loadingSpinner">
           <CircularProgress className="loading" /> <p>loading...please wait</p>

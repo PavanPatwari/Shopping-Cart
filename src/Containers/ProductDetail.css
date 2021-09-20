@@ -98,3 +98,35 @@ button:hover{
     background-color: rgb(55, 91, 139); 
 }
 
+@media only screen and (max-width: 600px) {
+    .productDetail{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 5px;
+        border: none;
+        max-width: 80%;
+        height: 100vh;
+        margin: 25px;
+        border-radius: 4px;
+    }
+
+    .productDetail__title{
+        font-weight: 500;
+        margin: 20px;
+        font-size: 1.0em;
+    }
+
+    .productDetail__left{
+        max-width: 70%;
+        margin-left: 5px;
+        border-right:none;
+        margin-right: 5px;
+        padding-right: 8px;
+    }
+
+    .productDetail__accordion{
+        display: none;
+    }
+  }
+

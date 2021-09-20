@@ -63,7 +63,7 @@ function ProductDetail() {
           <div className="productDetail__title">{title}</div>
           <div className="productDetail__category">({category})</div>
         </div>
-        <Accordion>
+        <Accordion className="productDetail__accordion">
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel1a-content"
